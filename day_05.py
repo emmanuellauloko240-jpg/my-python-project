@@ -12,7 +12,7 @@ print(student["age"])
 print(student["country"])
 
 # Adding a new item
-student["course"] = "Python"
+student["course"] = "python"
 print(student)
 
 # Updating a value
@@ -67,7 +67,7 @@ print(student.get("email", "No email"))
 # Updating/adding multiple items
 student.update({
     "age": 18,
-    "course": "Python"
+    "course": "python"
 })
 print(student)
 
@@ -75,16 +75,32 @@ print(student)
 student.clear()
 print(student)
 
-# Copying a dictionary
+# Creating the dictionary again
 student = {
     "name": "Emmanuella",
     "age": 18,
     "country": "Nigeria"
 }
 
+# Copying a dictionary
 student_copy = student.copy()
 
 student_copy["age"] = 19
 
 print(student)
 print(student_copy)
+
+# Adding course and updating age
+student["course"] = "python"
+student["age"] = 19
+
+# Checking if country exists
+if "country" in student:
+    print(True)
+else:
+    print(False)
+
+# Printing only name and course
+for key, value in student.items():
+    if key == "name" or key == "course":
+        print(key, value)
