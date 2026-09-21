@@ -18,6 +18,8 @@ def expenses_tracker():
         if another == "no" or another == "n":
             break
     print(expenses)
+    print(f"Total cost spent: ₦{amount}")
+    print(f"expense: {expense}")
     print(f"total expenses: ₦{total}")
         
 expenses_tracker()
